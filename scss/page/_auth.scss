@@ -1,16 +1,36 @@
+@use "../abstracts";
 .auth {
   min-height: 100vh;
   display: flex;
   &__intro,
   &__content {
+    padding: 0 30px;
     flex: 1;
   }
   &__intro {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 50px;
+
+    &-logo,
+    &-next {
+      position: absolute;
+      left: 50%;
+      translate: -50%;
+    }
+
+    &-logo {
+      top: 80px;
+    }
+    &-next {
+      bottom: 50px;
+    }
+    &-img {
+      max-width: 100%;
+    }
     &-text {
       max-width: 412px;
       text-align: center;
@@ -21,6 +41,16 @@
   }
   &__content {
     background: var(--auth-content-bg);
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.3s;
+      overflow-y: auto;
+      &.hide {
+        translate: 100%;
+      }
+    }
     &-inner {
       display: flex;
       flex-direction: column;
