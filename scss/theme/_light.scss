@@ -40,6 +40,8 @@ html {
   // Breadcrumbs
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+  // Product detail
+  --product-detail-info-bg: #f6f6f6;
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);
@@ -49,5 +51,11 @@ html {
     --cate-item-bg: #fff;
     // Auth Intro
     --auth-intro-bg: #fff;
+    // Product page
+    --product-detail-bg: #fafafd;
+    // Breadcrumbs
+    --breadcrumbs-bg: #fff;
+    // Product detail
+    --product-detail-info-bg: #fff;
   }
 }
