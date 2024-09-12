@@ -42,6 +42,11 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   // Product detail
   --product-detail-info-bg: #f6f6f6;
+  --product-detail-info-content-bg: #fff;
+  --product-detail-price-color: #000;
+  --product-detail-tag-bg: #9e9da8;
+  // Search bar
+  --search-bar-bg: #fff;
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

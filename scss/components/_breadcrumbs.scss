@@ -11,7 +11,6 @@
   box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
   @include abstracts.screen(md) {
     gap: 16px;
-    font-size: 1.4rem;
     border-radius: 20px;
   }
   &__link {
@@ -25,6 +24,9 @@
     white-space: nowrap;
     &--current {
       color: inherit;
+    }
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
     }
   }
 }
