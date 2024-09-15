@@ -47,6 +47,8 @@ html {
   --product-detail-tag-bg: #ededf6;
   // Search bar
   --search-bar-bg: #fff;
+  // review card
+  --review-card-bg: #fafafd;
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

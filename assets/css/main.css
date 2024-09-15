@@ -139,6 +139,10 @@ table {
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -167,7 +171,6 @@ select {
   color: inherit;
   outline: none;
   border: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -1370,6 +1373,7 @@ html {
   --product-detail-price-color: #000;
   --product-detail-tag-bg: #ededf6;
   --search-bar-bg: #fff;
+  --review-card-bg: #fafafd;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1432,6 +1436,7 @@ html.dark {
   --product-detail-info-content-bg: transparent;
   --product-detail-tag-bg: #292e39;
   --search-bar-bg: #171c28;
+  --review-card-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2777,13 +2782,31 @@ html.dark {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 16px;
-  background: #fafafd;
+  background: var(--review-card-bg);
   padding: 30px;
+  height: 100%;
 }
 .review-card__content {
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__content {
+    flex-direction: row;
+    align-items: initial;
+    text-align: initial;
+  }
 }
 .review-card__avatar {
   height: 80px;
@@ -2803,16 +2826,30 @@ html.dark {
   line-height: 1.5; /* 150% */
 }
 .review-card__rating {
-  margin-top: 20px;
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-top: auto;
+}
+@media (max-width: 1199.98px) {
+  .review-card__rating {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    flex-direction: row;
+  }
 }
 .review-card__rating-title {
   margin-left: 12px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44; /* 144.444% */
+}
+.review-card__star-list {
+  display: flex;
+  gap: 8px;
 }
 
 .text-content {
@@ -3296,12 +3333,29 @@ html.dark {
   display: flex;
   margin: 0 -30px;
 }
+@media (max-width: 767.98px) {
+  .prod-tab__list {
+    margin: 0 -20px;
+    flex-wrap: wrap;
+  }
+}
 .prod-tab__item {
   padding: 0 30px;
   color: #9e9da8;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.45; /* 145.455% */
+  user-select: none;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    padding: 8px 20px;
+    font-size: 1.8rem;
+  }
+}
+.prod-tab__item:not(.prod-tab__item--current) {
+  cursor: pointer;
 }
 .prod-tab__item--current {
   color: inherit;

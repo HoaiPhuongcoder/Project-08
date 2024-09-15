@@ -58,6 +58,8 @@ html.dark {
   --product-detail-tag-bg: #292e39;
   // Search bar
   --search-bar-bg: #171c28;
+  // Review card
+  --review-card-bg: #171c28;
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }
