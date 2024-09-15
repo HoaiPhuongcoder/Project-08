@@ -1374,6 +1374,7 @@ html {
   --product-detail-tag-bg: #ededf6;
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
+  --text-content-hr-bg: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1388,6 +1389,7 @@ html {
     --product-detail-bg: #fafafd;
     --breadcrumbs-bg: #fff;
     --product-detail-info-bg: #fff;
+    --review-card-bg: #fff;
   }
 }
 
@@ -1437,6 +1439,7 @@ html.dark {
   --product-detail-tag-bg: #292e39;
   --search-bar-bg: #171c28;
   --review-card-bg: #171c28;
+  --text-content-hr-bg: #414349;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2908,11 +2911,12 @@ html.dark {
 }
 .text-content a {
   color: #0071dc;
+  text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2921,7 +2925,7 @@ html.dark {
   border: none;
   height: 1.5px;
   margin: 40px 0;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg);
 }
 
 .home {
@@ -3369,10 +3373,13 @@ html.dark {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab__text-content {
+  margin-top: -20px;
+}
 
 .prod-content__heading {
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 1.41; /* 141.667% */
   margin-bottom: 30px;
 }
