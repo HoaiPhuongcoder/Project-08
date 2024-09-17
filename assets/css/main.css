@@ -2398,7 +2398,6 @@ html.dark {
 }
 .btn--small {
   height: 40px;
-  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
@@ -3609,6 +3608,13 @@ html.dark {
   font-weight: 700;
   line-height: 1.41; /* 141.667% */
 }
+@media (max-width: 767.98px) {
+  .cart-info__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+  }
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
@@ -3779,6 +3785,9 @@ html.dark {
   font-weight: 500;
   line-height: 1.46; /* 146.667% */
 }
+.cart-item__input-btn {
+  display: flex;
+}
 .cart-item__total-price {
   font-size: 2.2rem;
   font-weight: 700;
@@ -3835,6 +3844,18 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
@@ -3847,9 +3868,23 @@ html.dark {
   font-weight: 400;
   line-height: 1.46; /* 146.667% */
 }
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  color: #0071dc;
+}
+
 .address-card {
   margin-top: 30px;
   display: flex;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
 }
 .address-card__left {
   flex: 1;
@@ -3862,6 +3897,7 @@ html.dark {
   line-height: 1.44; /* 144.444% */
 }
 .address-card__desc {
+  width: min(520px, 90%);
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.46; /* 146.667% */
@@ -3869,11 +3905,17 @@ html.dark {
 .address-card__list {
   margin-top: 20px;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   list-style: disc inside;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.42; /* 142.857% */
+}
+@media (max-width: 575.98px) {
+  .address-card__list {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 .address-card__list-item {
   margin-left: 8px;
@@ -3890,6 +3932,18 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.44; /* 144.444% */
+}
+.address-card__checkbox-input {
+  appearance: none;
+}
+.address-card__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.address-card__checkbox-input:not(:checked)::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+}
+.address-card__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
 }
 
 /*# sourceMappingURL=main.css.map */
