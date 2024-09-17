@@ -22,6 +22,17 @@
   @include abstracts.screen(md) {
     padding: 16px;
   }
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41; /* 141.667% */
+  }
+  &__sub-heading {
+    margin: 30px 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44; /* 144.444% */
+  }
   &__list {
     margin-top: -30px;
     @include abstracts.screen(md) {
@@ -220,5 +231,74 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.42; /* 142.857% */
+  }
+}
+.user-address {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44; /* 144.444% */
+  }
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46; /* 146.667% */
+  }
+
+  &__list {
+  }
+}
+.address-card {
+  margin-top: 30px;
+  display: flex;
+  &__left {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+  }
+  &__info {
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44; /* 144.444% */
+  }
+  &__desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46; /* 146.667% */
+  }
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    list-style: disc inside;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42; /* 142.857% */
+    &-item {
+      margin-left: 8px;
+    }
+  }
+  &__crtl {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.44; /* 144.444% */
+    }
+  }
+  &__right {
   }
 }
