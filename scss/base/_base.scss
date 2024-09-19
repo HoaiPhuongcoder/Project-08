@@ -40,9 +40,19 @@ button {
   padding: 0;
   cursor: pointer;
 }
-input {
+input,
+textarea {
   background: transparent;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 999999s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 .icon {
   filter: var(--icon-color);
 }
