@@ -49,6 +49,9 @@ html.dark {
   --auth-heading-color: var(--auth-intro-text-color);
   // Form
   --form-placeholder-color: var(--auth-intro-text-color);
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+  --form-select-dialog-bg: #2f3441;
+  --form-option-hover-bg: #171c28;
   // Product page
   --product-detail-bg: #292e39;
   // Breadcrumbs
