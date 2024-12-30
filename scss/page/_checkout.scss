@@ -82,6 +82,13 @@
       font-size: 2.2rem;
       font-weight: 700;
     }
+    &-md--block {
+      @include abstracts.screen(md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+      }
+    }
   }
 
   &__separate {
@@ -144,6 +151,11 @@
   }
   &__check-all {
     margin: 30px 0;
+  }
+  &__checkout-all {
+    @include abstracts.screen(md) {
+      width: 100%;
+    }
   }
   //
 }
@@ -224,6 +236,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__ctrl {
     margin-top: auto;
@@ -231,6 +247,10 @@
     align-items: center;
     gap: 20px;
     min-height: 44px;
+    @include abstracts.screen(sm) {
+      gap: 10px;
+    }
+
     &--md-block {
       @include abstracts.screen(md) {
         flex-direction: column;
@@ -278,6 +298,9 @@
   }
   &__checkout-btn {
     margin-top: auto;
+    @include abstracts.screen(md) {
+      max-width: 200px;
+    }
   }
 }
 
